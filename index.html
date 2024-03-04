@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokeFind</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./img/icon-pokefind.png" type="image/x-icon">
+    <script src="./index.js" defer></script>
+    <script src="https://kit.fontawesome.com/121ad576a7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <img draggable="false" src="./img/logo.png" alt="">
+    </header>
+    <main>
+        <section id="modalOffline">
+            <h2>Você está offline!</h2>
+            <button class="btn-def" onclick="location.reload()">Recarregar página</button>
+        </section>
+
+        <section id="modal-delete-pokemon">
+            <div>
+                <h4 style="width: fit-content;" class="input-def">Tem certeza que deseja deletar esse Pokemón?</h4>
+                <div>
+                    <button type="button" class="btn-def delete-it" style="background-color: red; color: var(--branco); width: 150px;">Sim</button>
+                    <button type="button" class="btn-def dont-delete-it" style="background-color: grey; color: var(--branco); width: 150px;">Não</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="modalInfo">
+            <div class="input-def" style="background-color: white; width: fit-content;">
+                <p></p>
+            </div>
+        </section>
+
+        <section id="modalPokedex">
+            <div>
+                <h3 style="margin-top: 35px;">Meus Pokemóns</h3>
+                <i class="fa-sharp fa-solid fa-xmark close-icon-2 btn-def"></i>
+                <div class="pokemons">
+                </div>
+            </div>
+        </section>
+
+        <section id="modal" >
+            <div id="modal-container">
+                <i class="fa-sharp fa-solid fa-xmark close-icon btn-def"></i>
+                <div>
+                    <div class="container-pokemon-img">
+                        <img id="pokemonImage" src="" alt="Imagem do Pokemón">
+                    </div>
+                    <img class="pokedex" src="./img/pokedex.png" alt="Pokedex">
+                    <div>
+                        <p class="input-def name-pkm"></p>
+                        <button type="button" class="btn-def btn-add-pkm add">Adicionar na minha pokedéx</button>
+                    </div>
+                </div>
+                <div class="about-pkm">
+                    <p class="input-def about"></p>
+                    <p class="input-def charac"></p>
+                    <p class="input-def height"></p>
+                    <p class="input-def weight"></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="center">
+            <h3>Procure um Pokemón e salve na sua Pokedéx!</h3>
+            <label for="search">
+                <input placeholder="Nome do Pokemón" type="search" name="search" id="search">
+                <div>
+                    <button class="btn-def abs" type="button">Procurar</button>
+                </div>
+            </label>
+            <button class="btn-def btn-show-pokdx" type="button">Abrir minha pokedéx</button>
+        </section>
+    </main>
+</body>
+</html>
