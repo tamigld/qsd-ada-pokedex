@@ -21,11 +21,16 @@ const charac = document.querySelector(".charac");
 const height = document.querySelector(".height");
 const weight = document.querySelector(".weight");
 
-if (!navigator.onLine) {
+window.addEventListener('offline', () => {
   console.error("Sem conexão com a internet.");
   document.getElementById("modalOffline").style.opacity = "1";
   document.getElementById("modalOffline").style.visibility = "visible";
-}
+})
+
+window.addEventListener('online', () => {
+  document.getElementById("modalOffline").style.opacity = "0";
+  document.getElementById("modalOffline").style.visibility = "hidden";
+})
 
 
 const showModalInfo = (modal, text) => {

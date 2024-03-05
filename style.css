@@ -318,6 +318,10 @@ label {
     color: var(--branco);
 }
 
+.cardPokemon:hover{
+    scale: 1.02;
+}
+
 .cardTypePokemon {
     padding: 5px 10px;
     border-radius: 20px;
@@ -332,7 +336,7 @@ label {
 }
 
 .pokemons {
-    margin-top: 20px;
+    padding: 20px;
     width: 80%;
     height: 80%;
     overflow-y: scroll;
