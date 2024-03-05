@@ -266,6 +266,7 @@ label {
 }
 
 #modalPokedex {
+    user-select: none;
     transition: ease all 0.3s;
     z-index: 1;
     visibility: hidden;
